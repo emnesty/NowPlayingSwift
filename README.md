@@ -1,4 +1,4 @@
-# NowPlayingCLI
+# NowPlayingSwift
 
 Obtém informações da mídia tocando no macOS usando APIs do MediaRemote framework.
 
