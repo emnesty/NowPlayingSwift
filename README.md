@@ -1,70 +1,58 @@
-# NowPlayingCLI - Swift Version
+# NowPlayingCLI
 
-Uma prova de conceito em Swift para obter informações da mídia tocando atualmente no macOS 15.4+.
+Obtém informações da mídia tocando no macOS usando APIs do MediaRemote framework.
 
-## Descrição
+## 🚀 Uso Rápido
 
-Esta aplicação Swift replica a funcionalidade do script AppleScript original, usando as mesmas APIs privadas do MediaRemote framework para obter:
-
-- Título da música/vídeo
-- Álbum
-- Artista
-- Aplicativo de origem (Music, Spotify, YouTube, etc.)
+```bash
+swift main.swift      # CLI (terminal)
+swift main_gui.swift  # GUI (interface gráfica)
+```
 
 ## Requisitos
 
 - macOS 15.4+
-- Swift (incluído no Xcode Command Line Tools)
-
-## Instalação
-
-1. Clone ou baixe este repositório
-2. No terminal, navegue até o diretório do projeto
-3. Execute: `make`
+- Mídia tocando (Music, Spotify, YouTube, etc.)
 
 ## Uso
 
-### Compilar e executar:
+### Versão CLI (Original):
+
+#### Executar diretamente:
+
+```bash
+swift main.swift
+```
+
+#### Ou compilar e executar:
+
 ```bash
 make run
 ```
 
-### Apenas compilar:
+## Saída
+
+**CLI:** `Never Gonna Give You Up - Whenever You Need Somebody - Rick Astley | Music`
+
+**GUI:** Interface com campos separados, atualização automática a cada 2s e botão de refresh manual.
+
+## Compilar (Opcional)
+
 ```bash
-make
+make        # CLI
+make gui    # GUI
+make run    # Compila e roda CLI
+make run-gui # Compila e roda GUI
 ```
 
-### Executar o binário compilado:
-```bash
-./build/nowplaying-cli
-```
+## Problemas?
 
-### Instalar no sistema:
-```bash
-make install
-```
-
-## Exemplo de Saída
-
-```
-Never Gonna Give You Up - Whenever You Need Somebody - Rick Astley | Music
-```
-
-## Estrutura do Projeto
-
-- `main.swift` - Código principal da aplicação
-- `Makefile` - Scripts de build e instalação
-- `Action_Plan.md` - Documentação original do projeto
-
-## Limitações
-
+- Use `swift` diretamente em vez de `make run`
+- Certifique-se de que há mídia tocando
 - Funciona apenas no macOS 15.4+
-- Usa APIs privadas do sistema (MediaRemote framework)
-- Destinado para uso fora da App Store
 
-## Comparação com o AppleScript Original
+## Arquivos
 
-Esta versão Swift mantém a mesma funcionalidade do script AppleScript original, mas oferece:
-- Melhor performance
-- Integração mais fácil com outras aplicações Swift/Objective-C
-- Binário standalone compilado
+- `main.swift` - CLI
+- `main_gui.swift` - GUI  
+- `Action_Plan.md` - Documentação original
